@@ -28,6 +28,31 @@ def add_entry(entries):
     entries.append(entry)
     print("Entry added successfully!")
 
+
+def view_entries(entries):
+    if not entries:
+        print("No entries recorded yet.")
+        return
+    print("\n--- All Recorded Entries ---")
+    for i, entry in enumerate(entries, 1):
+        print(f"{i}. [{entry['type']}] {entry['title']} | Priority: {entry['priority']} | Status: {entry['status']}")
+
+
+def display_statistics(entries):
+    total = len(entries)
+    bugs = sum(1 for e in entries if e['type'] == 'Bug')
+    features = sum(1 for e in entries if e['type'] == 'Feature')
+    open_entries = sum(1 for e in entries if e['status'] == 'Open')
+    resolved_entries = sum(1 for e in entries if e['status'] == 'Resolved')
+
+    print("\n--- Tracker Statistics ---")
+    print(f"Total Entries: {total}")
+    print(f"Total Bugs: {bugs}")
+    print(f"Total Features: {features}")
+    print(f"Open Entries: {open_entries}")
+    print(f"Resolved Entries: {resolved_entries}")
+
+
 def main():
     entries = []
     while True:
@@ -40,16 +65,17 @@ def main():
         choice = input("Enter your choice (1-4): ").strip()
         
         if choice == '1':
-            pass
+            add_entry(entries)
         elif choice == '2':
-            pass
+            view_entries(entries)
         elif choice == '3':
-            pass
+            display_statistics(entries)
         elif choice == '4':
             print("Exiting application. Goodbye!")
             break
         else:
             print("Invalid choice! Please select between 1 and 4.")
+
 
 if __name__ == "__main__":
     main()
