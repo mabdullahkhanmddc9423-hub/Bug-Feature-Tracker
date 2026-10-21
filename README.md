@@ -46,18 +46,38 @@ Added .gitignore and project README documentation.
 
 ![Empty Folder](screenshots/Empty-Folder.png)
 
+#### Description
+
+Shows the initial local project directory Bug-Feature-Tracker before adding any code files or initializing Git.
+
 ### Git Initialization
 
 ![Git Initialization](screenshots/git-init.png)
+
+#### Description
+
+Terminal output demonstrating local repository initialization using git init and checking the initial state with git status.
 
 ### Commits
 
 ![Commit Evidence](screenshots/commits.png)
 
+#### Description:
+
+Terminal output showing iterative staging (git add) and committing (git commit) of feature implementation changes.
+
 ### Successful Push
 
 ![Successful Git Push](screenshots/git-push.png)
 
+#### Description
+
+Terminal output displaying the successful push of local commits to the remote GitHub main branch.
+
 ### Commit History
 
 ![Commit History](screenshots/commit-history.png)
+
+#### Description
+
+Terminal output from git log --oneline verifying a complete history of meaningful commits tracking project development.
