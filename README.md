@@ -60,4 +60,4 @@ Added .gitignore and project README documentation.
 
 ### Commit History
 
-![Commit History](screenshots/commits-history.png)
+![Commit History](screenshots/commit-history.png)
